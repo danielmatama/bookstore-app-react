@@ -2,8 +2,9 @@ import React from 'react';
 
 function Categories() {
   return (
-    <button type="button">Check status</button>
+    <div className="status-btn">
+      <button type="button">Check Status</button>
+    </div>
   );
 }
-
 export default Categories;

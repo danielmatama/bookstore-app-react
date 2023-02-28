@@ -4,12 +4,18 @@ import { Link } from 'react-router-dom';
 function Navbar() {
   return (
     <div>
-      <ul>
-        <Link key="1" to="/">Books</Link>
-        <Link key="2" to="/categories">Categories</Link>
-      </ul>
+      <nav>
+        <h1>Bookstore</h1>
+        <ul>
+          <li>
+            <Link to="/Book">Book</Link>
+          </li>
+          <li>
+            <Link to="/Categories">Categories</Link>
+          </li>
+        </ul>
+      </nav>
     </div>
   );
 }
-
 export default Navbar;

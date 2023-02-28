@@ -1,11 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import BookStore from './components/BookStore';
+import App from './App';
 
 ReactDOM.render(
   <React.StrictMode>
-    <BookStore />
+    <App />
   </React.StrictMode>,
   document.getElementById('root'),
 );

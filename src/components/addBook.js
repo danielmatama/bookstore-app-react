@@ -1,6 +1,6 @@
 import React from 'react';
 
-function BookAdd() {
+function addBook() {
   return (
     <>
       <h2>ADD NEW BOOK</h2>
@@ -8,7 +8,7 @@ function BookAdd() {
         <input type="text" placeholder="Book Title .." />
         <input type="text" placeholder="Book Author .." />
         <select id="books" name="books">
-          <option value="Fiction">SciFiction</option>
+          <option value="Fiction">Fiction</option>
           <option value="Action">Action</option>
           <option value="Adventure">Adventure</option>
           <option value="Romance">Romance</option>
@@ -18,5 +18,4 @@ function BookAdd() {
     </>
   );
 }
-
-export default BookAdd;
+export default addBook;
