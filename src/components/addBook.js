@@ -1,21 +1,57 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { addBook } from '../redux/books/books';
 
-function addBook() {
+function AddBook() {
+  const bookList = useSelector((state) => state);
+  const dispatch = useDispatch();
+  const [state, setState] = useState({
+    title: '',
+    author: '',
+  });
+
+  const read = (e) => {
+    const input = e.target;
+    setState({
+      ...state,
+      [input.name]: input.value,
+    });
+  };
+
+  const submit = (e) => {
+    e.preventDefault();
+
+    if (state.title && state.author) {
+      let totID = 0;
+      for (let i = 0; i < bookList.books.length; i += 1) {
+        if (bookList.books[i].id > totID) {
+          totID = bookList.books[i].id;
+        }
+      }
+
+      dispatch(
+        addBook({
+          id: totID + 1,
+          title: state.title,
+          author: state.author,
+        }),
+      );
+      setState({
+        title: '',
+        author: '',
+      });
+    }
+  };
+
   return (
-    <>
-      <h2>ADD NEW BOOK</h2>
-      <form action="#">
-        <input type="text" placeholder="Book Title .." />
-        <input type="text" placeholder="Book Author .." />
-        <select id="books" name="books">
-          <option value="Fiction">Fiction</option>
-          <option value="Action">Action</option>
-          <option value="Adventure">Adventure</option>
-          <option value="Romance">Romance</option>
-        </select>
-        <button type="button">ADD BOOK</button>
+    <div className="form-inputs">
+      <h1>ADD A NEW BOOK</h1>
+      <form className="inputs" onSubmit={submit}>
+        <input type="text" name="title" placeholder="Book-Title" value={state.title} onChange={read} />
+        <input type="text" name="author" placeholder="Book-Author" value={state.author} onChange={read} />
+        <button type="submit">Add</button>
       </form>
-    </>
+    </div>
   );
 }
-export default addBook;
+export default AddBook;

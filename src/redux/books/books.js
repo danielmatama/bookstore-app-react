@@ -2,7 +2,18 @@
 const ADD_BOOK = 'bookstore-app/books/ADD_BOOK';
 const REMOVE_BOOK = 'bookstore-app/books/REMOVE_BOOK';
 
-const initialState = [];
+const initialState = [
+  {
+    id: 1,
+    title: '100 WAYS TO BE MONEY WISER',
+    author: 'Tilda Nabbanja',
+  },
+  {
+    id: 2,
+    title: 'BACK HOUSE',
+    author: 'Butamanya George',
+  },
+];
 
 export const addBook = (book) => ({
   type: ADD_BOOK,
