@@ -18,7 +18,7 @@ const Book = ({ title, author, id }) => {
       <div className="book-item">
         <div>
           <h2 className="book-title">{title}</h2>
-          <p className="">{author}</p>
+          <p className="book-author">{author}</p>
           <div className="links-container">
             <ul>
               <li><button type="button" className="btn-1 line">Comments</button></li>

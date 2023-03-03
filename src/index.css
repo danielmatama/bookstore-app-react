@@ -90,7 +90,14 @@ a.active {
   border: 1px solid #e8e8e8;
   padding: 1rem;
   margin-bottom: 1rem;
+  margin-left: 50px;
+  margin-right: 50px;
   background-color: #fff;
+}
+
+.Add-book {
+  margin-left: 50px;
+  margin-right: 50px;
 }
 
 .book-title {
@@ -106,6 +113,7 @@ a.active {
   font-size: 0.875rem;
   font-weight: 300;
 }
+
 
 .add-form {
   display: flex;
@@ -174,7 +182,7 @@ button[type='submit'] {
   align-self: center;
   display: flex;
   align-items: center;
-  padding-right: 10rem;
+  padding-right: 20rem;
   margin-right: -25rem;
   border-right: 1px solid #e8e8e8;
 }
