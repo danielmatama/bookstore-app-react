@@ -182,7 +182,7 @@ button[type='submit'] {
   align-self: center;
   display: flex;
   align-items: center;
-  padding-right: 20rem;
+  padding-right: 3rem;
   margin-right: -25rem;
   border-right: 1px solid #e8e8e8;
 }
